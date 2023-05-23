@@ -1,7 +1,7 @@
 import React from 'react';
 
 const currentYear = new Date().getFullYear();
-const locationLink = window.location.protocol + '//' + window.location.hostname;
+const locationLink = `${window.location.protocol}//${window.location.hostname}`;
 
 const Footer = () => (
   <div className="mt-24">
