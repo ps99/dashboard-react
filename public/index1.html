@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iOS Safari - Hidden Scrollbar</title>
+</head>
+<body>
+  <div class="div-with-scrollbar">
+    <style style="display: block;white-space: pre;" contenteditable>
+      ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+        height: 3px;
+      }
+
+      ::-webkit-scrollbar-track {
+        height: 5px !important;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 4px !important;
+        height: 3px;
+        background: #41617D !important;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+      }
+
+      .div-with-scrollbar {
+        overflow: auto;
+        -webkit-overflow-scrolling: auto
+      }
+
+      .div-too-big {
+        height: 3000px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(255, 0, 0, .5);
+        box-shadow: 0 0 1px rgba(0, 255, 255, .5);
+      }
+    </style>
+    <div class="div-too-big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum magna eget arcu
+      venenatis molestie in quis arcu. Donec porta purus eu odio pharetra, quis rutrum turpis posuere. Fusce vitae
+      sagittis metus. Morbi vitae porttitor nisi. Integer sit amet porttitor turpis. Fusce vitae velit ac mi tristique
+      rhoncus ut in erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut eros nibh. Interdum et
+      malesuada fames ac ante ipsum primis in faucibus. Sed a sapien quis odio ornare volutpat eu eu orci. Nunc eget
+      lectus magna. Cras non urna ex. </div>
+  </div>
+</body>
+</html>
